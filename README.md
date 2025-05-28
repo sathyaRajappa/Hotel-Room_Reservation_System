@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Hotel Room Reservation System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based hotel room reservation system that optimally assigns rooms based on travel time minimization.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Smart Room Assignment**: Automatically selects rooms to minimize travel time
+- **Floor Selection**: Choose preferred floors for booking
+- **Visual Floor Plan**: Interactive visualization of all 10 floors
+- **Random Occupancy**: Generate random room bookings for testing
+- **Responsive Design**: Works on desktop and mobile devices
 
-### `npm start`
+## Room Assignment Rules
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Priority**: Same floor first, then minimize travel time
+2. **Travel Time Calculation**:
+   - Horizontal: 1 minute per room difference
+   - Vertical: 2 minutes per floor difference
+3. **Building Structure**:
+   - Floors 1-9: 10 rooms each (101-110, 201-210, etc.)
+   - Floor 10: 7 rooms (1001-1007)
+   - Lift/stairs on the left side
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Local Setup
 
-### `npm test`
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Start development server**:
+   ```bash
+   npm Start
+   ```
 
-### `npm run build`
+3. **Build for production**:
+   ```bash
+   npm run build
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── components/
+│   ├── HotelReservationSystem.tsx    # Main component
+│   ├── FloorSelector.tsx             # Floor selection dropdown
+│   ├── CustomButton.tsx              # Custom button component
+│   ├── CustomInput.tsx               # Custom input component
+│   └── CustomToast.tsx               # Toast notification component
+├── hooks/
+│   └── useCustomToast.tsx            # Toast hook
+├── App.tsx                           # App component
+└── index.css                         # Global styles
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- **React 18** with TypeScript
+- **Custom Components** (no external UI libraries)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Enter the number of rooms to book (1-5)
+2. Optionally select preferred floors
+3. Click "Book Rooms" to see optimal room assignment
+4. Use "Random Occupancy" to generate test data
+5. Use "Reset All" to clear all bookings
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The system will automatically calculate and display the total travel time for the selected rooms.
