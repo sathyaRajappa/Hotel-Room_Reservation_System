@@ -1,2 +1,65 @@
 # Hotel-Room_Reservation_System
 Hotel Room Reservation System for a 10-floor, 97-room hotel. Books up to 5 rooms prioritizing same-floor availability and minimizes total travel time (horizontal: 1 min/room, vertical: 2 min/floor). Includes booking UI, room visualization, random occupancy, and reset functionality.
+## Features
+- **Smart Room Assignment**: Automatically selects rooms to minimize travel time
+- **Floor Selection**: Choose preferred floors for booking
+- **Visual Floor Plan**: Interactive visualization of all 10 floors
+- **Random Occupancy**: Generate random room bookings for testing
+- **Responsive Design**: Works on desktop and mobile devices
+
+## Room Assignment Rules
+1. **Priority**: Same floor first, then minimize travel time
+2. **Travel Time Calculation**:
+   - Horizontal: 1 minute per room difference
+   - Vertical: 2 minutes per floor difference
+3. **Building Structure**:
+   - Floors 1-9: 10 rooms each (101-110, 201-210, etc.)
+   - Floor 10: 7 rooms (1001-1007)
+   - Lift/stairs on the left side
+
+## Local Setup
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Start development server**:
+   ```bash
+   npm start
+   ```
+
+3. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── HotelReservationSystem.tsx    # Main component
+│   ├── FloorSelector.tsx             # Floor selection dropdown
+│   ├── CustomButton.tsx              # Custom button component
+│   ├── CustomInput.tsx               # Custom input component
+│   └── CustomToast.tsx               # Toast notification component
+├── hooks/
+│   └── useCustomToast.tsx            # Toast hook
+├── App.tsx                           # App component
+```
+
+## Technologies Used
+
+- **React 18** with TypeScript
+- **Custom Components** (no external UI libraries)
+
+## Usage
+
+1. Enter the number of rooms to book (1-5)
+2. Optionally select preferred floors
+3. Click "Book Rooms" to see optimal room assignment
+4. Use "Random Occupancy" to generate test data
+5. Use "Reset All" to clear all bookings
+
+The system will automatically calculate and display the total travel time for the selected rooms.
