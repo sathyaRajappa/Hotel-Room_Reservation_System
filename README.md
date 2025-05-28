@@ -1,7 +1,7 @@
 # Hotel Room Reservation System
-![Screenshot 2025-05-28 115502](https://github.com/user-attachments/assets/aff28855-7365-43fe-a732-62d728e7d3c9)
-
 A React-based hotel room reservation system that optimally assigns rooms based on travel time minimization.
+
+![Screenshot 2025-05-28 115502](https://github.com/user-attachments/assets/aff28855-7365-43fe-a732-62d728e7d3c9)
 
 ## Features
 
@@ -10,6 +10,8 @@ A React-based hotel room reservation system that optimally assigns rooms based o
 - **Visual Floor Plan**: Interactive visualization of all 10 floors
 - **Random Occupancy**: Generate random room bookings for testing
 - **Responsive Design**: Works on desktop and mobile devices
+  
+![Uploading Screenshot 2025-05-28 115702.png…]()
 
 ## Room Assignment Rules
 
