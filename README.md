@@ -11,7 +11,7 @@ A React-based hotel room reservation system that optimally assigns rooms based o
 - **Random Occupancy**: Generate random room bookings for testing
 - **Responsive Design**: Works on desktop and mobile devices
   
-![Uploading Screenshot 2025-05-28 115702.png…]()
+![Screenshot 2025-05-28 115702](https://github.com/user-attachments/assets/48928edc-a616-44ea-8ca6-cbcce3aec38b)
 
 ## Room Assignment Rules
 
